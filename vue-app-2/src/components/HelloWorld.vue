@@ -1,7 +1,10 @@
 <template>
   <div class="Bonjour!">
     <h1>{{ msg }}</h1>
-    
+    <p>
+      Maëlle GUYADER <br>
+      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
+    </p>
     
   </div>
 </template>
