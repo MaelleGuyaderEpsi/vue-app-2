@@ -1,12 +1,19 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <img alt="Vue logo" src="./assets/meteo.png">
+  <home msg="Météo par département"/>
+  
 </template>
+
+<script>
+import home from './components/home.vue'
+
+export default {
+  name: 'App',
+  components: {
+    home
+  }
+}
+</script>
 
 <style>
 #app {
@@ -16,15 +23,5 @@
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>

@@ -1,7 +1,7 @@
 export default {
     data () {
       return {
-        nom: 'Daniel Vermonden'
+        nom: 'Maëlle GUYADER'
       }
     },
     methods: {

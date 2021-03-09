@@ -1,32 +1,21 @@
 <template>
-	<div class="home">
-		<h1>{{ msg }}</h1>
-    	<p>
-			<button class="button" @click="meteo">Voir la météo</button>
-			<button class="button" @click="about">A propos</button>
-		</p>
 
-  	</div>
+  <div class="home">
+    <h1>{{ msg }}</h1>
+    <p><button class="button" @click="meteo">Voir la météo</button></p>
+  </div>
 </template>
 
 <script>
-
 export default {
   name: 'home',
-  methods: {
-  	testRouter: function () {
-  		this.$router.push({ name: 'about', params: { username: 'Lily' }
-  		})
-  	},
-  	testRouterWithQuery: function () {
-  		this.$router.push({ name: 'about', query: { nom: 'Maëlle GUYADER' }
-  		})
-  	}
+  props: {
+    msg: String
   }
-
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
@@ -42,7 +31,6 @@ li {
 a {
   color: #42b983;
 }
-
 .button {
   background-color: #109CD1;
   border: none;
