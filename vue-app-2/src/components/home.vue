@@ -2,7 +2,7 @@
 
   <div class="home">
     <h1>{{ msg }}</h1>
-    <p><button class="button" @click="meteo">Voir la météo</button></p>
+    <p><button class="button button1" @click="meteo">Voir la météo</button></p>
   </div>
 </template>
 
@@ -32,15 +32,26 @@ a {
   color: #42b983;
 }
 .button {
-  background-color: #109CD1;
+  background-color: #109CD1; /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 16px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
+  transition-duration: 0.4s;
   cursor: pointer;
+}
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #109CD1;
+}
+
+.button1:hover {
+  background-color: #109CD1;
+  color: white;
 }
 </style>

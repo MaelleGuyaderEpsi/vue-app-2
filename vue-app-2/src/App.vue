@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/meteo.png">
+  <img alt="Vue logo" src="./assets/logo-meteo.png">
   <home msg="Météo par département"/>
   
 </template>
