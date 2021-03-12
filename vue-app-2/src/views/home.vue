@@ -1,19 +1,20 @@
 <template>
-  
-
   <div class="home">
 
     <h1>{{ msg }}</h1>
     <p><input type="number" name="name" id="name" v-model="name" placeholder="code postal"></p>
-    <p><button class="button button1" @click="meteo" type="submit">Voir la météo</button></p>
+    <p><button type="button" class="btn btn-outline-primary" @click="lerouteur" method="post">Voir la météo</button></p>
   </div>
 </template>
 
 <script>
 export default {
   name: 'home',
-  props: {
-    msg: String
+  methods: {
+    lerouteur: function() {
+      this.$router.push({name: 'infos', params: {username: 'informations'}
+      })
+    }
   }
 }
 </script>
@@ -34,36 +35,6 @@ li {
 a {
   color: #42b983;
 }
-.button {
-  background-color: #109CD1; 
-  border: none;
-  color: #109CD1;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-.button1 {
-  background-color: white; 
-  color: #109CD1; 
-  border: 2px solid #109CD1;
-}
-
-.button1:hover {
-  background-color: #109CD1;
-  color: white;
-}
-
-.button1:focus {
-  outline: none;
-  background-color: #109CD1;
-  color: white;
-}
-
 input {
   background-color: white; 
   border: solid 2px #109CD1;
